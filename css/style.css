@@ -1,0 +1,194 @@
+:root {
+  --audio-btn-color: var(--color-white);
+  --audio-btn-bg: #a9d88e;
+  --audio-btn-border: var(--color-light-green);
+
+  --game-btn-color: var(--color-green);
+  --game-btn-bg: #d8eb9f;
+  --game-btn-border: #aaca69;
+
+  --timer-color: var(--color-brown);
+  --timer-bg: #fae39b;
+  --timer-border: #d3c5a1;
+
+  --counter-color: var(--color-green);
+  --counter-bg: #f0e268;
+  --counter-border: #e1d354;
+
+  /* color */
+  --color-white: #fff8e7;
+  --color-light-green: #a5b97a;
+  --color-green: #4a822c;
+  --color-brown: #5f4b3b;
+
+  /* size */
+  --btn-size: 52px;
+  --font-size: 1.5rem;
+
+  /* border-radius */
+  --border-sm: 8px;
+  --border-md: 24px;
+  --border-round: 50%;
+  /* spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DynaPuff', system-ui;
+  user-select: none;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light-green);
+  cursor: default;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+/* Common */
+.btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+}
+.btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+}
+/*  */
+.game-intro {
+  display: flex;
+  gap: var(--space-md);
+}
+.game-intro__title {
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+  font-size: calc(var(--font-size) * 2);
+  font-weight: 400;
+}
+.game-intro__img {
+  width: var(--btn-size);
+  height: var(--btn-size);
+}
+/*  */
+.game-window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 800px;
+  height: 50vh;
+  min-height: 400px;
+  border-radius: var(--border-md);
+  background: url('../asset/image/background.png') center / cover no-repeat;
+}
+/* audio */
+.bg-btn {
+  margin: 0.2rem;
+  background-color: var(--audio-btn-bg);
+  border: 3px solid var(--audio-btn-border);
+  border-radius: var(--border-round);
+  color: var(--audio-btn-color);
+}
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size);
+}
+.game-btn,
+.replay-btn {
+  background-color: var(--game-btn-bg);
+  border: 3px solid var(--game-btn-border);
+  border-radius: var(--border-sm);
+  color: var(--game-btn-color);
+}
+.pause {
+  display: none;
+}
+.timer {
+  visibility: hidden;
+  padding: var(--space-sm) var(--space-lg);
+  border: 3px solid var(--timer-border);
+  border-radius: var(--border-sm);
+  background-color: var(--timer-bg);
+  color: var(--timer-color);
+  transition: all 300ms ease;
+}
+.score-board {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border: 3px solid var(--counter-border);
+  border-radius: var(--border-round);
+  background-color: var(--counter-bg);
+  color: var(--counter-color);
+  transition: all 300ms ease;
+}
+.game-field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* main */
+.notification {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: var(--space-md) 0;
+  gap: var(--space-md);
+  background-color: rgba(169, 216, 142, 0.7);
+  border-radius: var(--border-md);
+  transform: translateY(100%);
+  z-index: 5;
+}
+.show-notification {
+  display: flex;
+}
+.notification__text {
+  font-size: var(--font-size);
+  color: var(--color-brown);
+}
+
+.four-leaf,
+.rabbit {
+  position: absolute;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  cursor: pointer;
+}
+/*  */
+.four-leaf,
+.rabbit {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.four-leaf:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+.rabbit:hover {
+  transform: scale(1.2) rotate(5deg);
+}

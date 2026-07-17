@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>Spot the lucky clover!</title>
+    <meta
+      name="description"
+      content="Game which click and find all the four-leaf clovers to be lucky."
+    />
+    <meta name="author" content="Byte-nana" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./asset/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./asset/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./asset/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./asset/favicon/site.webmanifest" />
+    <!-- OG -->
+    <!-- <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" /> -->
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Javascript -->
+    <!-- <script type="module" src="./src/main.js" defer></script> -->
+    <script src="./src/main-refactor.js" defer></script>
+  </head>
+  <body>
+    <section class="game-intro">
+      <h1 class="game-intro__title">Spot the lucky clover!</h1>
+      <img
+        class="game-intro__img"
+        src="./asset/image/four-leaf.png"
+        alt="A four-leaf clover"
+      />
+    </section>
+    <section class="game-window">
+      <figure>
+        <figcaption>
+          <button class="bg-btn btn" aria-label="Toggle background music">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+        </figcaption>
+        <audio
+          class="audio-bg"
+          loop
+          preload="auto"
+          src="./asset/sound/bg.mp3"
+        ></audio>
+      </figure>
+      <header class="header">
+        <button class="game-btn btn" aria-label="Button for playing game">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <p class="timer"></p>
+        <p class="score-board"></p>
+      </header>
+      <main class="game-field"></main>
+    </section>
+    <section class="notification">
+      <button class="replay-btn btn">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+      <p class="notification__text"></p>
+    </section>
+  </body>
+</html>

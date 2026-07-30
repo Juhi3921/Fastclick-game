@@ -17,3 +17,6 @@ HTML, CSS, Vanilla JS
 - **Click rabbit** → plays “rabbit-pull” sound and triggers game over.
 - **Timer ends** → checks if all clovers found; shows win/lose alert.
 - **Replay button** resets everything instantly.
+
+## Screenshot:
+<img width="1366" height="768" alt="lucky clover" src="https://github.com/user-attachments/assets/f9b538ee-2c41-4e91-b50a-37f3755faa8c" />
